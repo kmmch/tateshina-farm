@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>長野県茅野市の農園 | 蓼科ごとう農園</title>
+    <meta name=”description” content=”「蓼科ごとう農園」は、蓼科の新鮮な農産物を提供するだけでなく、蓼科の自然環境を大切に守り、後世に残すことを使命としています。” />
+    <meta name="robots" content="noindex">
+    <link rel="stylesheet" href="./node_modules/destyle.css/destyle.css">
+    <link rel="stylesheet" href="./node_modules/swiper/swiper-bundle.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <!-- TODO：Basic認証もちゃんとかかっているか、本番環境で確認をお願いします。 -->
+</head>
+<body>
+    <div class="fv">
+        <div class="fv__wrapper">
+            <span class="fv__txt">あなたは知ってる？</span>
+            <br>
+            <span class="fv__txt">蓼科を丸ごと味わう</span>
+            <br>
+            <span class="fv__txt">喜びを</span>    
+        </div>
+    </div>
+    <header class="header">
+        <div class="header__upper">
+            <figure>
+                <img src="./assets/images/logo-01.svg" alt="牛さんマーク">
+            </figure>
+        </div>
+        <div class="header__lower">
+            <nav class="gnav">
+                <ul class="gnav__list">
+                    <li class="gnav__list--item is-pc"><a href="#About">この農園について</a></li>
+                    <li class="gnav__list--item is-pc"><a href="#Product">製品一覧</a></li>
+                    <li class="gnav__list--item is-pc"><a href="#News">お知らせ</a></li>
+                    <li class="gnav__list--item">
+                        <a href="/">
+                            <figure><img src="./assets/images/logo-02.png" alt="蓼科ごとう農園"></figure>
+                        </a>
+                    </li>
+                    <li class="gnav__list--item is-pc"><a href="#Faq"></a>FAQ</li>
+                    <li class="gnav__list--item is-pc"><a href="#Access">アクセス</a></li>
+                    <li class="gnav__list--item is-pc"><a href="#Contact">お問い合わせ</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div id="hamburgerBtn" class="is-sp openbtn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <nav id="hamburgerMenu" class="is-sp">
+            <div id="hamburgerMenuList">
+                <div class="hamburgerMenu__contents">
+                    <div class="hamburgerMenu__image">
+                        <figure>
+                            <img src="./assets/images/logo-01.svg" alt="牛さんマーク">
+                        </figure>
+                        <figure><img src="./assets/images/logo-02.png" alt="蓼科ごとう農園"></figure>    
+                    </div>
+                    <ul>
+                        <li><a href="#About" class="hamburgerMenu__link">この農園について</a></li> 
+                        <li><a href="#Product" class="hamburgerMenu__link">製品一覧</a></li> 
+                        <li><a href="#News" class="hamburgerMenu__link">お知らせ</a></li> 
+                        <li><a href="#Faq" class="hamburgerMenu__link">FAQ</a></li> 
+                        <li><a href="#Access" class="hamburgerMenu__link">アクセス</a></li> 
+                        <li><a href="#Contact" class="hamburgerMenu__link">お問い合わせ</a></li> 
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div id="hamburgerCover" class="is-sp"></div>
+    </header>
+    <section id="About">
+        <div class="wrapper">
+            <h2 class="section__ttl">蓼科の生きた<br class="is-sp">豊かな恵みを、<br class="is-sp">そのままに</h2>
+            <p class="about__txt">「蓼科ごとう農園」は、蓼科の新鮮な農産物を提供するだけでなく、<br>
+                蓼科の自然環境を大切に守り、後世に残すことを使命としています。<br>
+                私たちは、農業に従事する者として、<br>
+                土地や水、空気といった自然環境がもたらす恩恵に感謝し、<br>
+                その恩恵を受け継ぐ未来の世代にも、<br>
+                同じような恩恵を受け継ぐことができるよう、<br>
+                最善を尽くしています。<br>
+                そのため、私たちは有機農法を導入し、<br>
+                化学肥料や農薬を極力使用しない栽培方法を取り入れています。<br>
+                また、自然災害に備え、耕作放棄地の再生や山の植林活動など、<br>
+                地域の環境保全活動にも積極的に参加しています。<br>
+                私たちは、「蓼科ごとう農園」を通じて、<br>
+                蓼科の美しい自然を末永く守り、<br>
+                地域の豊かな暮らしを支えることを目指しています。
+            </p>
+            <div class="about__img--wrapper">
+                <figure class="about__img upper">
+                    <img src="./assets/images/about-01.png" alt="">
+                </figure>
+                <figure class="about__img lower">
+                    <img src="./assets/images/about-02.png" alt="">
+                </figure>    
+            </div>
+        </div>
+    </section>
+    <section id="Product">
+        <div class="wrapper">
+            <h2 class="section__ttl">製品一覧</h2>
+            <div class="section__contents">
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+                        <!-- <div class="swiper-slide">
+                            <img src="./assets/images/tmp/img01.png" alt="" class="slider__img">
+                        </div>
+                        <div class="swiper-slide"><img src="./assets/images/tmp/img02.png" alt="" class="slider__img"></div>
+                        <div class="swiper-slide"><img src="./assets/images/tmp/img03.png" alt="" class="slider__img"></div>
+                        <div class="swiper-slide"><img src="./assets/images/tmp/img04.png" alt="" class="slider__img"></div>
+                        <div class="swiper-slide"><img src="./assets/images/tmp/img05.png" alt="" class="slider__img"></div> -->
+                        
+                        <div class="swiper-slide">
+                            <li class="product__list--item">
+                                <figure class="product__img">
+                                    <img src="./assets/images/strawberries.png" alt="">
+                                </figure>
+                                <h3 class="product__ttl">
+                                    <a href="#">「あいまりん」「サマープリンセス」「サマーリリカル」「よつぼし」など詰め合わせ10パック</a>
+                                </h3>
+                                <p class="product__price">￥ 4,800（税込）</p>
+                            </li>            
+                        </div>
+
+                        <div class="swiper-slide">
+                            <li class="product__list--item">
+                                <figure class="product__img">
+                                    <img src="./assets/images/grapes.png" alt="">
+                                </figure>
+                                <h3 class="product__ttl">
+                                    <a href="#">蓼科ごとう農園オリジナル品種の「シャインマスカット」と「ナガノパープル」500g</a>
+                                </h3>
+                                <p class="product__price">￥ 7,700（税込）</p>
+                            </li>            
+                        </div>
+                        <div class="swiper-slide">
+                            <li class="product__list--item">
+                                <figure class="product__img">
+                                    <img src="./assets/images/brussels-sprouts.png" alt="">
+                                </figure>
+                                <h3 class="product__ttl">
+                                    <a href="#">標高1,000mオーバーの蓼科高原だからこその、あまあま芽キャベツ!! 1kg</a>
+                                </h3>
+                                <p class="product__price">￥ 4,200（税込）</p>
+                            </li>            
+                        </div>
+                        <div class="swiper-slide">
+                            <li class="product__list--item">
+                                <figure class="product__img">
+                                    <img src="./assets/images/strawberries.png" alt="">
+                                </figure>
+                                <h3 class="product__ttl">
+                                    <a href="#">「あいまりん」「サマープリンセス」「サマーリリカル」「よつぼし」など詰め合わせ10パック</a>
+                                </h3>
+                                <p class="product__price">￥ 4,800（税込）</p>
+                            </li>            
+                        </div>
+
+                        <div class="swiper-slide">
+                            <li class="product__list--item">
+                                <figure class="product__img">
+                                    <img src="./assets/images/grapes.png" alt="">
+                                </figure>
+                                <h3 class="product__ttl">
+                                    <a href="#">蓼科ごとう農園オリジナル品種の「シャインマスカット」と「ナガノパープル」500g</a>
+                                </h3>
+                                <p class="product__price">￥ 7,700（税込）</p>
+                            </li>            
+                        </div>
+                        <div class="swiper-slide">
+                            <li class="product__list--item">
+                                <figure class="product__img">
+                                    <img src="./assets/images/brussels-sprouts.png" alt="">
+                                </figure>
+                                <h3 class="product__ttl">
+                                    <a href="#">標高1,000mオーバーの蓼科高原だからこその、あまあま芽キャベツ!! 1kg</a>
+                                </h3>
+                                <p class="product__price">￥ 4,200（税込）</p>
+                            </li>            
+                        </div>
+
+                    </div>
+                </div>        
+
+                <!-- <li class="product__list--item">
+                    <figure class="product__img">
+                        <img src="./assets/images/brussels-sprouts.png" alt="">
+                    </figure>
+                    <h3 class="product__ttl">
+                        <a href="#">標高1,000mオーバーの蓼科高原だからこその、あまあま芽キャベツ!! 1kg</a>
+                    </h3>
+                    <p class="product__price">￥ 4,200（税込）</p>
+                </li> -->
+            </div>
+        </div>
+    </section>
+    <section id="News"></section>
+    <section id="Faq"></section>
+    <section id="Access"></section>
+    <section id="Contact"></section>
+    <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="./node_modules/swiper/swiper-bundle.js"></script>
+    <script src="./assets/js/index.js"></script>
+</body>
+</html>

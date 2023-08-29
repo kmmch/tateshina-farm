@@ -1,0 +1,461 @@
+@use "modules/variables" as *;
+@use "modules/mixin" as *;
+
+// --------------------------------------------
+// 共通
+// --------------------------------------------
+* {
+    font-family: "Noto Sans JP", sans-serif;
+    color: $colorText;
+}
+
+li {
+    list-style: none;
+}
+
+.wrapper {
+    max-width: $wrapperMaxWidth;
+    width: 90%;
+    margin: 0 auto;
+
+    @include pc {
+        max-width: $wrapperMaxWidthPc;
+    }
+}
+
+.noScroll {
+    overflow: hidden;
+}
+
+.is-pc {
+    display: none;
+    @include pc {
+        display: block;
+    }
+}
+
+.is-sp {
+    @include pc {
+        display: none;
+    }
+}
+
+
+// --------------------------------------------
+// ファーストビジュアル
+// --------------------------------------------
+.fv {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-image: url(../images/fv.png);
+    height: 100vh;
+    max-height: 667px;
+    padding: 423px 0 0 33px;
+
+    @include pc {
+        max-height: 854px;
+        padding: 112px 146px 0 0;
+    }
+
+    &__wrapper {
+        width: 100%;
+        @include pc {
+            writing-mode: vertical-rl;
+
+        }
+    }
+    
+    &__txt {
+        display: inline-block;
+        font-weight: $fontWeightMain;
+        background-color: $colorWhite;
+        padding: 7px;
+        margin-bottom: 6px;
+        @include rem(24);
+        @include pc {
+            max-width: 432px;
+            letter-spacing: 0.5em;
+            padding: 10px 15px 0;
+            margin-top: 0;
+            margin-left: 21px;
+                @include rem(32);
+        }
+    }
+}
+
+
+// --------------------------------------------
+// ヘッダー
+// --------------------------------------------
+.header {
+    position: relative;
+    background-color: $colorBackground;
+
+    &__upper {
+        background-color: $colorBackground;
+        position: absolute;
+        width: 154px;
+        height: 154px;
+        border-radius: 50% 50% 0 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        @include pc {
+            transform: translate(-35%, -50%);
+        }
+    }
+
+    &__lower {
+        z-index: 1;
+        position: relative;
+    }
+}
+.gnav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 51px 0 45px 0;
+    
+    &__list {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &:nth-child(2) {
+            margin: 0 39px;
+        }
+
+        &--item {
+            margin: 0 20px;
+            font-weight: $fontWeightMain;
+        }
+    }
+}
+
+
+#hamburgerBtn{
+	position: fixed;
+    z-index: 99999;
+	top: 20px;
+	right: 20px;
+	cursor: pointer;
+    width: 48px;
+    height:48px;
+    background: $colorHamburgerBackground;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+    border-radius: 50px;
+    transition: all 0.6s;
+
+    & span{
+        display: inline-block;
+        transition: all .4s;
+        position: absolute;
+        left: 16px;
+        height: 2px;
+        border-radius: 2px;
+        background-color: $colorText;
+        width: 18px;
+
+        &:nth-of-type(1) {
+            top: calc(50% - 5px);	
+        }
+
+        &:nth-of-type(2) {
+            top: 50%;
+        }
+
+        &:nth-of-type(3) {
+            top: calc(50% + 5px);
+        }
+    }
+
+    &.active {
+        @include pc {
+            right: calc(30% - 0.9px);
+            border-radius: 50% 0 0 50%;
+        }
+        & span {
+            &:nth-of-type(1), &:nth-of-type(3) {
+                top: 50%;
+                right: 50%;
+                left: 6px;
+            }
+            &:nth-of-type(1) {
+                transform: translate(50%, -50%) rotate(45deg);
+            }
+
+            &:nth-of-type(2) {
+                opacity: 0;
+            }
+
+            &:nth-of-type(3){
+                transform: translate(50%, -50%) rotate(-45deg);
+            }
+        }
+    }
+}
+
+
+#hamburgerMenu{
+    /*position:fixed;にし、z-indexの数値を大きくして前面へ*/
+    position:fixed;
+    z-index: 9999;
+    /*ナビのスタート位置と形状*/
+	top:0;
+    right: -120%;
+	width:100%;
+    height: 100vh;/*ナビの高さ*/
+    background: rgba(255, 255, 255, 0.90);
+    transition: all 0.6s;
+
+    @include pc {
+        width: 30%;
+    }
+
+    /*アクティブクラスがついたら位置を0に*/
+    &.active{
+        right: 0;
+
+        /*ナビゲーションの縦スクロール*/
+        & #hamburgerMenuList{
+            /*ナビの数が増えた場合縦スクロール*/
+            position: fixed;
+            z-index: 999; 
+            width: 100%;
+            height: 100vh;/*表示する高さ*/
+            overflow: auto;
+            -webkit-overflow-scrolling: touch;
+
+            @include pc {
+                width: 30%;
+            }
+        }
+    }
+
+    & ul {
+        & li {
+            list-style: none;
+            text-align: center;
+            margin-bottom: 18px;
+            
+            & a {
+                color: $colorText;
+                text-decoration: none;
+                display: block;
+                text-transform: uppercase;
+                letter-spacing: 0.1em;
+                font-weight: 700;    
+                @include rem(16);        
+            }
+        }
+    }
+}
+
+.hamburgerMenu {
+    &__contents {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+    &__image {
+        margin-bottom: 36px;
+
+        & figure {
+            &:nth-child(1) {
+                text-align: center;
+
+                & img {
+                    width: 55px;
+                }
+            }
+        }
+    }
+}
+
+
+#hamburgerCover {
+    &.active {
+        position: fixed;
+	    width: 100%;
+	    height: 100%;
+	    top: 0;
+    	left: 0;
+	    z-index: 9997;
+	    background: rgba(3,3,3,.5);
+	    display: block;
+    }
+}
+
+
+
+
+// --------------------------------------------
+// メインエリア
+// --------------------------------------------
+
+
+
+// --------------------------------------------
+// メインコンテンツ
+// --------------------------------------------
+section {
+    &:nth-child(2n) {
+        background-color: $colorBackground;
+    }
+}
+.section {
+
+    // セクションタイトル
+    &__ttl {
+        @include rem(32);
+        text-align: center;
+        font-weight: $fontWeightMain;
+        margin-bottom: 90px;
+    }
+}
+
+
+// この農園について
+#About {
+    background-color: $colorBackground;
+    padding: 35px 0 126px 0;
+    @include pc {
+        padding: 101px 0 180px 0;
+        position: relative;
+    }
+
+    & .section__ttl {
+        color: #35A1C3;
+        text-align: center;
+        background: rgba(255, 255, 255, 0.90);
+        padding: 9px 10px;
+        margin-bottom: 30px;
+        @include rem(24);
+
+        @include pc {
+            display: inline-block;
+            text-align: start;
+            position: relative;
+            z-index: 99;
+            @include rem(40);
+        }
+    }
+
+    & .about {
+        &__txt {
+            max-width: 526px;
+            background: rgba(255, 255, 255, 0.90);
+            line-height: 250%; 
+            padding: 15px;
+            margin-bottom: 30px;
+            @include rem(14);
+    
+            @include pc{
+                position: relative;
+                z-index: 99;
+            }
+        }
+    
+        &__img--wrapper {
+            @include pc {
+                position: absolute;
+                top: 50px;
+                right: 80px;
+            }
+        }
+
+        &__img {
+            text-align: end;
+            width: 100%;
+    
+            & > img {
+                width: 80%;
+            }
+    
+            &.upper {
+                margin-bottom: 38px;
+                @include pc {
+                    margin-bottom: 70px;
+                }
+            }
+    
+            &.lower {
+                & > img {
+                    width: 50%;
+                }
+            }
+        }
+    }
+}
+
+
+
+// 製品一覧
+#Product {
+    padding: 0 0 100px 0;
+}
+
+.product {
+    &__list {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &--item {
+            background-color: $colorWhite;
+            max-width: 264px;
+            height: 331px;
+            box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.16);
+            display: flex;
+            flex-direction: column;
+            
+        }    
+    }
+
+    &__img {
+        & > img {
+            width: 100%;
+        }
+    }
+
+    &__ttl {
+        line-height: 150%;
+        padding: 16px 16px 0 16px;
+        font-weight: $fontWeightMain;
+    }
+
+    &__price {
+        margin-top: auto;
+        padding: 0 0 16px 16px;
+    }
+}
+
+
+// --------------------------------------------
+// サイドバー
+// --------------------------------------------
+
+
+
+// --------------------------------------------
+// フッター
+// --------------------------------------------
+
+
+
+// --------------------------------------------
+// スライダー
+// --------------------------------------------
+.slider {
+    &-slide {
+        width: 100%;
+    }
+    &__img {
+        height: auto;
+        width: 100%;
+    }
+}
