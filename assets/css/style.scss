@@ -435,6 +435,73 @@ section {
 }
 
 
+
+// お知らせ
+#News {
+    padding: 91px 0;
+}
+
+.news {
+    &__list {
+        margin-top: 90px;
+
+        &--item {
+            padding: 22px 0;
+            border-bottom: 1px solid #C6C6C6;
+
+            &:nth-child(1) {
+                border-top: 1px solid #C6C6C6;
+            }
+        }
+    }
+
+    &__date {
+        margin-bottom: 10px;
+        display: block;
+        color: #403F3F;
+        @include rem(12);
+
+        @include pc {
+            margin-right: 120px;
+            margin-bottom: 0px;
+            display: inline-block;
+            @include rem(13);
+        }
+    }
+
+    &__ttl {
+        display: block;
+        @include rem(14);
+
+        @include pc {
+            display: inline-block;
+            @include rem(16);
+        }
+    }
+}
+
+.middle__img {
+    position: relative;
+
+    & img {
+        position: absolute;
+        width: 50%;
+        top: 30px;
+        right: -15px;
+
+        @include pc {
+            right: -175px;
+        }
+    }
+}
+
+
+
+// FAQ
+#Faq {
+    padding: 91px 0;
+}
+
 // --------------------------------------------
 // サイドバー
 // --------------------------------------------
