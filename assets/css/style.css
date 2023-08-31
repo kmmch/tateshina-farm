@@ -374,6 +374,15 @@ section:nth-child(2n) {
 #News {
   padding: 91px 0;
 }
+#News .middle__img img {
+  top: 30px;
+  right: -15px;
+}
+@media screen and (min-width: 768px) {
+  #News .middle__img img {
+    right: -175px;
+  }
+}
 
 .news__list {
   margin-top: 90px;
@@ -420,13 +429,6 @@ section:nth-child(2n) {
 .middle__img img {
   position: absolute;
   width: 50%;
-  top: 30px;
-  right: -15px;
-}
-@media screen and (min-width: 768px) {
-  .middle__img img {
-    right: -175px;
-  }
 }
 
 #Faq {

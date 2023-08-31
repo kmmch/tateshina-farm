@@ -439,6 +439,17 @@ section {
 // お知らせ
 #News {
     padding: 91px 0;
+
+    .middle__img {
+        & img {
+            top: 30px;
+            right: -15px;
+
+            @include pc {
+                right: -175px;
+            }    
+        }
+    }
 }
 
 .news {
@@ -486,12 +497,6 @@ section {
     & img {
         position: absolute;
         width: 50%;
-        top: 30px;
-        right: -15px;
-
-        @include pc {
-            right: -175px;
-        }
     }
 }
 
