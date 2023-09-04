@@ -429,10 +429,85 @@ section:nth-child(2n) {
 .middle__img img {
   position: absolute;
   width: 50%;
+  max-width: 235px;
 }
 
 #Faq {
   padding: 91px 0;
+}
+
+.faq__list {
+  max-width: 740px;
+  margin: 0 auto;
+}
+.faq__list--item {
+  margin-bottom: 31px;
+}
+.faq__list--item:nth-last-child(1) {
+  margin-bottom: 0px;
+}
+.faq__list--item details {
+  height: 50px;
+  transition: 0.5s;
+}
+.faq__list--item details[open] {
+  height: 180px;
+}
+.faq__list--item details[open] summary::after {
+  transform: rotate(225deg);
+  top: 18px;
+}
+.faq__list--item summary {
+  display: flex;
+  justify-content: flex-start;
+  list-style: none;
+  background-color: #fff;
+  padding: 16px 0 12px 55px;
+  margin-bottom: 36px;
+  height: 50px;
+  font-size: 16px; /*IE9以前に対応する*/
+  font-size: 1rem;
+  font-weight: 700;
+  position: relative;
+}
+@media screen and (min-width: 768px) {
+  .faq__list--item summary {
+    font-size: 18px; /*IE9以前に対応する*/
+    font-size: 1.125rem;
+  }
+}
+.faq__list--item summary::-webkit-details-marker {
+  display: none;
+}
+.faq__list--item summary::before {
+  position: absolute;
+  content: "Q";
+  top: 12px;
+  left: 24px;
+  font-size: 24px; /*IE9以前に対応する*/
+  font-size: 1.5rem;
+}
+.faq__list--item summary::after {
+  position: absolute;
+  content: "";
+  border-bottom: 4px solid #C6C6C6;
+  border-right: 4px solid #C6C6C6;
+  width: 16px;
+  height: 16px;
+  transform: rotate(45deg);
+  top: 14px;
+  right: 24px;
+  transition: all 0.5s;
+}
+.faq__list--item p {
+  font-size: 14px; /*IE9以前に対応する*/
+  font-size: 0.875rem;
+}
+@media screen and (min-width: 768px) {
+  .faq__list--item p {
+    font-size: 18px; /*IE9以前に対応する*/
+    font-size: 1.125rem;
+  }
 }
 
 .slider-slide {

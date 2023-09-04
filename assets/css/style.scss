@@ -497,6 +497,7 @@ section {
     & img {
         position: absolute;
         width: 50%;
+        max-width: 235px;
     }
 }
 
@@ -505,6 +506,86 @@ section {
 // FAQ
 #Faq {
     padding: 91px 0;
+}
+
+.faq {
+    &__list {
+        max-width: 740px;
+        margin: 0 auto;
+    
+        &--item {
+            margin-bottom: 31px;
+
+            &:nth-last-child(1) {
+                margin-bottom: 0px;
+            }
+
+            & details {
+                height: 50px;
+                transition: 0.5s;
+
+                &[open] {
+                    height: 180px;
+                    & summary {
+                        &::after {
+                            transform: rotate(225deg);
+                            top: 18px;
+                        }
+                    }
+                }
+            }
+
+            & summary {
+                display: flex;
+                justify-content: flex-start;
+                // flex-direction: column-reverse;
+                list-style: none;
+                background-color: $colorWhite;
+                padding: 16px 0 12px 55px;
+                margin-bottom: 36px;
+                height: 50px;
+                @include rem(16);
+                font-weight: $fontWeightMain;
+                position: relative;
+
+                @include pc {
+                    @include rem(18);
+                }
+
+                &::-webkit-details-marker {
+                    display:none;
+                }
+
+                &::before {
+                    position: absolute;
+                    content: "Q";
+                    top: 12px;
+                    left: 24px;
+                    @include rem(24);
+                }
+
+                &::after {
+                    position: absolute;
+                    content: "";
+                    border-bottom: 4px solid #C6C6C6;
+                    border-right: 4px solid #C6C6C6;
+                    width: 16px;
+                    height: 16px;
+                    transform: rotate(45deg);
+                    top: 14px;
+                    right: 24px;
+                    transition: all 0.5s;
+                }
+            }
+
+            & p {
+                @include rem(14);
+                @include pc {
+                    @include rem(18);
+                }
+            }
+        }
+    }
 }
 
 // --------------------------------------------
