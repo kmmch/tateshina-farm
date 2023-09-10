@@ -458,10 +458,10 @@ section {
 
         &--item {
             padding: 22px 0;
-            border-bottom: 1px solid #C6C6C6;
+            border-bottom: 1px solid $colorBorder;
 
             &:nth-child(1) {
-                border-top: 1px solid #C6C6C6;
+                border-top: 1px solid $colorBorder;
             }
         }
     }
@@ -567,8 +567,8 @@ section {
                 &::after {
                     position: absolute;
                     content: "";
-                    border-bottom: 4px solid #C6C6C6;
-                    border-right: 4px solid #C6C6C6;
+                    border-bottom: 4px solid $colorBorder;
+                    border-right: 4px solid $colorBorder;
                     width: 16px;
                     height: 16px;
                     transform: rotate(45deg);
@@ -584,6 +584,42 @@ section {
                     @include rem(18);
                 }
             }
+        }
+    }
+}
+
+
+
+// アクセス
+#Access {
+    padding: 91px 0 78px;
+
+    .section__contents {
+        @include pc {
+            display: flex;
+            justify-content: space-between;
+            // align-items: center;
+        }
+    }
+}
+
+.accessInfo {
+    width: 49%;
+    &__row {
+        display: flex;
+        border-bottom: 1px solid $colorBorder;
+        padding: 21px 0 20px;
+        font-weight: $fontWeightMain;
+
+        &:nth-of-type(1) {
+            border-top: 1px solid $colorBorder;
+        }
+
+        &__ttl {
+            width: 174px;
+        }
+        &__val {
+            // font-weight:$fontWeightMain;
         }
     }
 }

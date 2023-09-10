@@ -15,7 +15,7 @@ li {
 }
 @media screen and (min-width: 768px) {
   .wrapper {
-    max-width: 877px;
+    max-width: 934px;
   }
 }
 
@@ -510,6 +510,31 @@ section:nth-child(2n) {
   }
 }
 
+#Access {
+  padding: 91px 0 78px;
+}
+@media screen and (min-width: 768px) {
+  #Access .section__contents {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.accessInfo {
+  width: 49%;
+}
+.accessInfo__row {
+  display: flex;
+  border-bottom: 1px solid #C6C6C6;
+  padding: 21px 0 20px;
+  font-weight: 700;
+}
+.accessInfo__row:nth-of-type(1) {
+  border-top: 1px solid #C6C6C6;
+}
+.accessInfo__row__ttl {
+  width: 174px;
+}
 .slider-slide {
   width: 100%;
 }
