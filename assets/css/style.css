@@ -109,10 +109,14 @@ li {
 }
 
 .gnav {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   padding: 51px 0 45px 0;
+}
+@media screen and (min-width: 768px) {
+  .gnav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
 .gnav__list {
   display: flex;
@@ -524,9 +528,13 @@ section:nth-child(2n) {
   top: 0px;
 }
 
+.accessInfo {
+  margin-bottom: 30px;
+}
 @media screen and (min-width: 768px) {
   .accessInfo {
     width: 49%;
+    margin-bottom: 0px;
   }
 }
 .accessInfo__row {
@@ -548,11 +556,12 @@ section:nth-child(2n) {
 }
 
 .map {
-  width: 351px;
+  width: 100%;
+  max-width: 351px;
 }
 @media screen and (min-width: 768px) {
   .map {
-    width: 443px;
+    max-width: 443px;
   }
 }
 

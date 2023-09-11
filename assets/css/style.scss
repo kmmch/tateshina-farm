@@ -115,9 +115,11 @@ li {
     }
 }
 .gnav {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include pc {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
     padding: 51px 0 45px 0;
     
     &__list {
@@ -613,8 +615,11 @@ section {
 }
 
 .accessInfo {
+    margin-bottom: 30px;
+
     @include pc {
         width: 49%;
+        margin-bottom: 0px;
     }
     
     &__row {
@@ -638,9 +643,10 @@ section {
 }
 
 .map {
-    width: 351px;
+    width: 100%;
+    max-width: 351px;
     @include pc {
-        width: 443px;
+        max-width: 443px;
     }
 }
 
