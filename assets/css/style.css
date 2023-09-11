@@ -520,8 +520,10 @@ section:nth-child(2n) {
   }
 }
 
-.accessInfo {
-  width: 49%;
+@media screen and (min-width: 768px) {
+  .accessInfo {
+    width: 49%;
+  }
 }
 .accessInfo__row {
   display: flex;
@@ -533,8 +535,32 @@ section:nth-child(2n) {
   border-top: 1px solid #C6C6C6;
 }
 .accessInfo__row__ttl {
-  width: 174px;
+  width: 120px;
 }
+@media screen and (min-width: 768px) {
+  .accessInfo__row__ttl {
+    width: 174px;
+  }
+}
+.map {
+  width: 351px;
+}
+@media screen and (min-width: 768px) {
+  .map {
+    width: 443px;
+  }
+}
+
+#Contact {
+  padding: 104px 0 30px;
+}
+#Contact .section__ttl {
+  margin-bottom: 67px;
+}
+#Contact .description {
+  font-weight: 700;
+}
+
 .slider-slide {
   width: 100%;
 }

@@ -604,7 +604,10 @@ section {
 }
 
 .accessInfo {
-    width: 49%;
+    @include pc {
+        width: 49%;
+    }
+    
     &__row {
         display: flex;
         border-bottom: 1px solid $colorBorder;
@@ -616,11 +619,38 @@ section {
         }
 
         &__ttl {
-            width: 174px;
+            width: 120px;
+
+            @include pc {
+                width: 174px;
+            }
         }
         &__val {
             // font-weight:$fontWeightMain;
         }
+    }
+}
+
+.map {
+    width: 351px;
+    @include pc {
+        width: 443px;
+    }
+}
+
+
+
+// アクセス
+#Contact {
+    padding: 104px 0 30px;
+
+    & .section__ttl {
+        margin-bottom: 67px;
+    }
+
+    & .description {
+        font-weight: $fontWeightMain;
+
     }
 }
 
