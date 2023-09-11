@@ -270,6 +270,13 @@ section:nth-child(2n) {
   font-weight: 700;
   margin-bottom: 90px;
 }
+.section__img {
+  position: relative;
+}
+.section__img img {
+  position: absolute;
+  width: 50%;
+}
 
 #About {
   background-color: #FDF9EF;
@@ -374,14 +381,10 @@ section:nth-child(2n) {
 #News {
   padding: 91px 0;
 }
-#News .middle__img img {
-  top: 30px;
-  right: -15px;
-}
-@media screen and (min-width: 768px) {
-  #News .middle__img img {
-    right: -175px;
-  }
+#News .section__img img {
+  max-width: 235px;
+  right: 0px;
+  top: 12px;
 }
 
 .news__list {
@@ -423,17 +426,13 @@ section:nth-child(2n) {
   }
 }
 
-.middle__img {
-  position: relative;
-}
-.middle__img img {
-  position: absolute;
-  width: 50%;
-  max-width: 235px;
-}
-
 #Faq {
   padding: 91px 0;
+}
+#Faq .section__img img {
+  max-width: 349px;
+  left: 0px;
+  top: 32px;
 }
 
 .faq__list {
@@ -519,6 +518,11 @@ section:nth-child(2n) {
     justify-content: space-between;
   }
 }
+#Access .section__img img {
+  max-width: 264px;
+  right: 0px;
+  top: 0px;
+}
 
 @media screen and (min-width: 768px) {
   .accessInfo {
@@ -542,6 +546,7 @@ section:nth-child(2n) {
     width: 174px;
   }
 }
+
 .map {
   width: 351px;
 }

@@ -309,13 +309,21 @@ section {
     }
 }
 .section {
-
     // セクションタイトル
     &__ttl {
         @include rem(32);
         text-align: center;
         font-weight: $fontWeightMain;
         margin-bottom: 90px;
+    }
+
+    // セクション間の画像
+    &__img {
+        position: relative;
+        & img {
+            position: absolute;
+            width: 50%;
+        }
     }
 }
 
@@ -440,14 +448,11 @@ section {
 #News {
     padding: 91px 0;
 
-    .middle__img {
+    & .section__img {
         & img {
-            top: 30px;
-            right: -15px;
-
-            @include pc {
-                right: -175px;
-            }    
+            max-width: 235px; 
+            right: 0px;
+            top: 12px;
         }
     }
 }
@@ -491,21 +496,19 @@ section {
     }
 }
 
-.middle__img {
-    position: relative;
-
-    & img {
-        position: absolute;
-        width: 50%;
-        max-width: 235px;
-    }
-}
-
 
 
 // FAQ
 #Faq {
     padding: 91px 0;
+
+    & .section__img {
+        & img {
+            max-width: 349px; 
+            left: 0px;
+            top: 32px;
+        }
+    }
 }
 
 .faq {
@@ -538,7 +541,6 @@ section {
             & summary {
                 display: flex;
                 justify-content: flex-start;
-                // flex-direction: column-reverse;
                 list-style: none;
                 background-color: $colorWhite;
                 padding: 16px 0 12px 55px;
@@ -598,7 +600,14 @@ section {
         @include pc {
             display: flex;
             justify-content: space-between;
-            // align-items: center;
+        }
+    }
+
+    & .section__img {
+        & img {
+            max-width: 264px; 
+            right: 0px;
+            top: 0px;
         }
     }
 }
@@ -624,9 +633,6 @@ section {
             @include pc {
                 width: 174px;
             }
-        }
-        &__val {
-            // font-weight:$fontWeightMain;
         }
     }
 }
