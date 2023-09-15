@@ -277,6 +277,54 @@
             <h2 class="section__ttl">お問い合わせ</h2>
             <div class="section__contents">
                 <p class="description">ご購入・販売に関しましては、下記よりお気軽にお問い合わせください。</p>
+                <div class="form__wrapper">
+                    <h3 class="form__ttl">お問い合わせメールフォーム</h3>
+                    <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLScn_vA9kT7phdBv28iyhnnducKa6IqIT3p_nHsAmCELzHajRw/formResponse" id="contactForm">
+                        <div class="form__elm">
+                            <p class="form__elm--label required">お問い合わせ種類</p>
+                            <div class="form__elm--child">
+                                <input type="radio" id="product" name="entry.1892016494" required value="弊社製品について">
+                                <label for="product">弊社製品について</label>
+                            </div>
+                            <div class="form__elm--child">
+                                <input type="radio" id="strawberry" name="entry.1892016494" required value="いちご狩りについて">
+                                <label for="strawberry">いちご狩りについて</label>
+                            </div>
+                            <div class="form__elm--child">
+                                <input type="radio" id="other" name="entry.1892016494" required value="その他のお問い合わせ">
+                                <label for="other">その他のお問い合わせ</label>
+                            </div>
+                        </div>
+                        <div class="form__elm">
+                            <label class="required" for="name">お名前</label>
+                            <input type="text" name="entry.896627989" id="name" placeholder="お名前" required>
+                        </div>
+                        <div class="form__elm">
+                            <label for="zip">郵便番号</label>
+                            <input type="text" name="entry.2035254264" id="zip" placeholder="郵便番号">
+                        </div>
+                        <div class="form__elm">
+                            <label class="required" for="address">ご住所</label>
+                            <input type="text" name="entry.813759701" id="address" placeholder="ご住所" required>
+                        </div>
+                        <div class="form__elm">
+                            <label class="required" for="mail">メールアドレス</label>
+                            <input type="mail" name="entry.690088931" id="mail" placeholder="メールアドレス" required>
+                        </div>
+                        <div class="form__elm">
+                            <label class="required" for="tel">電話番号</label>
+                            <input type="text" name="entry.1188075824" id="tel" placeholder="電話番号" required>
+                        </div>
+                        <div class="form__elm">
+                            <label class="required" for="contact">お問い合わせ内容</label>
+                            <textarea name="entry.1682149697" id="contact" cols="30" rows="10" placeholder="お問い合わせ内容"></textarea>
+                        </div>
+                        <input type="submit" class="submit-btn">
+                    </form>
+                    <p class="end-message">お問い合わせありがとうございました</p>
+                    <p class="false-message">送信失敗です</p>
+                </div>
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
             </div>
         </div>
     </section>

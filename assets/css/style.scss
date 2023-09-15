@@ -662,7 +662,36 @@ section {
 
     & .description {
         font-weight: $fontWeightMain;
+        text-align: center;
 
+    }
+
+    & .end-message,
+    & .false-message {
+        display: none;
+    }
+}
+
+form {
+    & input,
+    & textarea {
+        border: 1px solid #000;
+
+        &[type="radio"] {
+            appearance: revert;
+            width: 20px;
+            height: 20px;
+        }
+    }
+}
+
+.form {
+    &__ttl {
+        font-weight: $fontWeightMain;
+        text-align: center;
+        @include pc {
+            @include rem(18);
+        }
     }
 }
 
