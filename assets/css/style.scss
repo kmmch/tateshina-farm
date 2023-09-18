@@ -652,7 +652,7 @@ section {
 
 
 
-// アクセス
+// お問い合わせ
 #Contact {
     padding: 104px 0 30px;
 
@@ -663,7 +663,8 @@ section {
     & .description {
         font-weight: $fontWeightMain;
         text-align: center;
-
+        margin-bottom: 93px;
+        @include rem(18);
     }
 
     & .end-message,
@@ -675,25 +676,135 @@ section {
 form {
     & input,
     & textarea {
-        border: 1px solid #000;
-
         &[type="radio"] {
+            border: $colorText 2px solid;
+            accent-color: $colorText;
             appearance: revert;
             width: 20px;
             height: 20px;
         }
     }
+
+    & input[type="text"],
+    & input[type="mail"],
+    & textarea {
+        width: 100%;
+        border: none;
+        border-radius: 5px;
+        background: #EFEAE6;
+        @include pc {
+            max-width: 334px;
+        }
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    & input[type="text"][id="zip"] {
+        @include pc {
+            max-width: 157px;
+        }
+    }
+
+    & input[type="text"],
+    & input[type="mail"] {
+        height: 40px;
+        padding: 0 10px;
+    }
+
+    & textarea {
+        resize: none;
+        height: 170px;
+        padding: 10px;
+    }
+
+    & input[type="submit"] {
+        font-weight: $fontWeightMain;
+        border-radius: 10px;
+        background: #FED966;
+        padding: 13px 94px;
+        text-align: center;
+        width: 100%;
+        @include pc {
+            max-width: 243px;
+        }
+    }
 }
 
 .form {
+    &__wrapper {
+        border-radius: 20px;
+        background: #FFF;
+        padding: 37px 20px 43px 20px;
+        @include pc {
+            padding: 37px 0 43px 76px;
+        }
+    }
+
     &__ttl {
+        margin-bottom: 41px;
         font-weight: $fontWeightMain;
         text-align: center;
         @include pc {
             @include rem(18);
         }
     }
+
+    &__elm {
+        @include pc {
+            display: flex;
+        }
+        margin-bottom: 24px;
+
+        &--container {
+            &:nth-child(1) {
+                display: flex;
+                align-items: flex-start;
+                margin-bottom: 8px;
+                @include pc {
+                    width: 45%;
+                    margin-bottom: 0px;
+                }
+            }
+
+            &:nth-child(2) {
+                @include pc {
+                    width: 50%;
+                }
+            }
+        }
+
+        &--label {
+            font-weight: $fontWeightMain;
+        }
+
+        &--child {
+            margin-bottom: 10px;
+
+            &:nth-last-child(1) {
+                margin-bottom: 0px;
+            }
+        }
+
+        &.submit {
+            margin-top: 50px;
+            text-align: center;
+            justify-content: center;
+        }
+    }
 }
+.required {
+    margin-top: -5px;
+    margin-left: 18px;
+    font-weight: $fontWeightMain;
+    border-radius: 10px;
+    background: #FED966;
+    padding: 5px 11px;
+    max-height: 30px;
+}
+
+
 
 // --------------------------------------------
 // サイドバー

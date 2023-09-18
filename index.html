@@ -281,45 +281,81 @@
                     <h3 class="form__ttl">お問い合わせメールフォーム</h3>
                     <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLScn_vA9kT7phdBv28iyhnnducKa6IqIT3p_nHsAmCELzHajRw/formResponse" id="contactForm">
                         <div class="form__elm">
-                            <p class="form__elm--label required">お問い合わせ種類</p>
-                            <div class="form__elm--child">
-                                <input type="radio" id="product" name="entry.1892016494" required value="弊社製品について">
-                                <label for="product">弊社製品について</label>
+                            <div class="form__elm--container">
+                                <p class="form__elm--label">お問い合わせ種類</p>
+                                <p class="required">必須</p>
                             </div>
-                            <div class="form__elm--child">
-                                <input type="radio" id="strawberry" name="entry.1892016494" required value="いちご狩りについて">
-                                <label for="strawberry">いちご狩りについて</label>
+                            <div class="form__elm--container">
+                                <div class="form__elm--child">
+                                    <input type="radio" id="product" name="entry.1892016494" required value="弊社製品について">
+                                    <label for="product">弊社製品について</label>
+                                </div>
+                                <div class="form__elm--child">
+                                    <input type="radio" id="strawberry" name="entry.1892016494" required value="いちご狩りについて">
+                                    <label for="strawberry">いちご狩りについて</label>
+                                </div>
+                                <div class="form__elm--child">
+                                    <input type="radio" id="other" name="entry.1892016494" required value="その他のお問い合わせ">
+                                    <label for="other">その他のお問い合わせ</label>
+                                </div>    
                             </div>
-                            <div class="form__elm--child">
-                                <input type="radio" id="other" name="entry.1892016494" required value="その他のお問い合わせ">
-                                <label for="other">その他のお問い合わせ</label>
+                        </div>
+                        <div class="form__elm">
+                            <div class="form__elm--container">
+                                <p class="form__elm--label">お名前</p>
+                                <p class="required">必須</p>
+                            </div>
+                            <div class="form__elm--container">
+                                <input type="text" name="entry.896627989" id="name" required>
                             </div>
                         </div>
                         <div class="form__elm">
-                            <label class="required" for="name">お名前</label>
-                            <input type="text" name="entry.896627989" id="name" placeholder="お名前" required>
+                            <div class="form__elm--container">
+                                <p class="form__elm--label">郵便番号</p>
+                            </div>
+                            <div class="form__elm--container">
+                                <input type="text" name="entry.2035254264" id="zip">
+                            </div>
                         </div>
                         <div class="form__elm">
-                            <label for="zip">郵便番号</label>
-                            <input type="text" name="entry.2035254264" id="zip" placeholder="郵便番号">
+                            <div class="form__elm--container">
+                                <p class="form__elm--label">ご住所</p>
+                                <p class="required">必須</p>
+                            </div>
+                            <div class="form__elm--container">
+                                <input type="text" name="entry.813759701" id="address" required>
+                            </div>
                         </div>
                         <div class="form__elm">
-                            <label class="required" for="address">ご住所</label>
-                            <input type="text" name="entry.813759701" id="address" placeholder="ご住所" required>
+                            <div class="form__elm--container">
+                                <p class="form__elm--label">メールアドレス</p>
+                                <p class="required">必須</p>
+                            </div>
+                            <div class="form__elm--container">
+                                <input type="mail" name="entry.690088931" id="mail" required>
+                            </div>
                         </div>
                         <div class="form__elm">
-                            <label class="required" for="mail">メールアドレス</label>
-                            <input type="mail" name="entry.690088931" id="mail" placeholder="メールアドレス" required>
+                            <div class="form__elm--container">
+                                <p class="form__elm--label">電話番号</p>
+                                <p class="required">必須</p>
+                            </div>
+                            <div class="form__elm--container">
+                                <input type="text" name="entry.1188075824" id="tel" required>
+                            </div>
                         </div>
                         <div class="form__elm">
-                            <label class="required" for="tel">電話番号</label>
-                            <input type="text" name="entry.1188075824" id="tel" placeholder="電話番号" required>
+                            <div class="form__elm--container">
+                                <p class="form__elm--label">お問い合わせ内容</p>
+                                <p class="required">必須</p>
+                            </div>
+                            <div class="form__elm--container">
+                                <textarea name="entry.1682149697" id="contact" cols="30" rows="10" required></textarea>
+                            </div>
                         </div>
-                        <div class="form__elm">
-                            <label class="required" for="contact">お問い合わせ内容</label>
-                            <textarea name="entry.1682149697" id="contact" cols="30" rows="10" placeholder="お問い合わせ内容"></textarea>
+                        <div class="form__elm submit">
+                            <input type="submit" class="submit-btn" value="送信する">
                         </div>
-                        <input type="submit" class="submit-btn">
                     </form>
                     <p class="end-message">お問い合わせありがとうございました</p>
                     <p class="false-message">送信失敗です</p>
