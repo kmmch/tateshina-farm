@@ -55,7 +55,7 @@ HAMBURGER_MENU_LINK_IDS.forEach((id) => {
 // --------------------------------------------
 // スライダー
 // --------------------------------------------
-const swiper = new Swiper(".swiper", {
+const swiper = new Swiper('.swiper', {
     loop: true,
     autoplay: {
         delay: 0,
@@ -88,11 +88,12 @@ $(document).ready(function () {
             dataType: "xml",
             statusCode: {
                 0: function () {
-                    $(".end-message").slideDown();
-                    $(".submit-btn").fadeOut();
+                    $('.end-message').slideDown();
+                    $('.submit-btn').fadeOut();
+                    $('#contactForm').fadeOut();
                 },
                 200: function () {
-                    $(".false-message").slideDown();
+                    $('.false-message').slideDown();
                 }
             }
         });

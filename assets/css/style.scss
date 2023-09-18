@@ -671,6 +671,11 @@ section {
     & .false-message {
         display: none;
     }
+
+    & .end-message {
+        text-align: center;
+        color: #7cb6ec;
+    }
 }
 
 form {

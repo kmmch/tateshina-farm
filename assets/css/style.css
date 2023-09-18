@@ -581,6 +581,10 @@ section:nth-child(2n) {
 #Contact .end-message, #Contact .false-message {
   display: none;
 }
+#Contact .end-message {
+  text-align: center;
+  color: #7cb6ec;
+}
 
 form input[type=radio], form textarea[type=radio] {
   border: #4E301B 2px solid;
