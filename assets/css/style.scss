@@ -815,7 +815,44 @@ form {
 // サイドバー
 // --------------------------------------------
 .footer {
-    &__copyright {
+    &Image {
+        margin-top: 24px;
+
+        & > img {
+            display: block;
+            margin: 0 auto;
+
+            &:nth-child(1) {
+                max-width: 96px;
+            }
+            &:nth-child(2) {
+                max-width: 300px;
+            }
+        }
+    }
+
+    &Menu {
+        @include pc {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        &__wrapper {
+            margin-top: 33px;
+            margin-bottom: 97px;
+
+            &.wrapper {
+                max-width: 568px;
+            }
+        }
+
+        &__item {
+            font-weight: $fontWeightMain;
+        }
+
+    }
+
+    &Copyright {
         padding: 21px 0 22px 0;
         background-color: #D9D9D9;
     }
