@@ -13,7 +13,7 @@ li {
   width: 90%;
   margin: 0 auto;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
   .wrapper {
     max-width: 934px;
   }
@@ -26,13 +26,13 @@ li {
 .is-pc {
   display: none;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
   .is-pc {
     display: block;
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
   .is-sp {
     display: none;
   }
@@ -47,7 +47,7 @@ li {
   max-height: 667px;
   padding: 423px 0 0 33px;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
   .fv {
     max-height: 854px;
     padding: 112px 146px 0 0;
@@ -56,7 +56,7 @@ li {
 .fv__wrapper {
   width: 100%;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
   .fv__wrapper {
     writing-mode: vertical-rl;
   }
@@ -70,7 +70,7 @@ li {
   font-size: 24px; /*IE9以前に対応する*/
   font-size: 1.5rem;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
   .fv__txt {
     max-width: 432px;
     letter-spacing: 0.5em;
@@ -98,7 +98,7 @@ li {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
   .header__upper {
     transform: translate(-35%, -50%);
   }
@@ -111,7 +111,7 @@ li {
 .gnav {
   padding: 51px 0 45px 0;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
   .gnav {
     display: flex;
     align-items: center;
@@ -163,7 +163,7 @@ li {
 #hamburgerBtn span:nth-of-type(3) {
   top: calc(50% + 5px);
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
   #hamburgerBtn.active {
     right: calc(30% - 0.9px);
     border-radius: 50% 0 0 50%;
@@ -197,7 +197,7 @@ li {
   transition: all 0.6s;
   /*アクティブクラスがついたら位置を0に*/
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
   #hamburgerMenu {
     width: 30%;
   }
@@ -215,7 +215,7 @@ li {
   overflow: auto;
   -webkit-overflow-scrolling: touch;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
   #hamburgerMenu.active #hamburgerMenuList {
     width: 30%;
   }
@@ -286,7 +286,7 @@ section:nth-child(2n) {
   background-color: #FDF9EF;
   padding: 35px 0 126px 0;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
   #About {
     padding: 101px 0 180px 0;
     position: relative;
@@ -301,7 +301,7 @@ section:nth-child(2n) {
   font-size: 24px; /*IE9以前に対応する*/
   font-size: 1.5rem;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
   #About .section__ttl {
     display: inline-block;
     text-align: start;
@@ -320,13 +320,13 @@ section:nth-child(2n) {
   font-size: 14px; /*IE9以前に対応する*/
   font-size: 0.875rem;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
   #About .about__txt {
     position: relative;
     z-index: 99;
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
   #About .about__img--wrapper {
     position: absolute;
     top: 50px;
@@ -343,7 +343,7 @@ section:nth-child(2n) {
 #About .about__img.upper {
   margin-bottom: 38px;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
   #About .about__img.upper {
     margin-bottom: 70px;
   }
@@ -408,7 +408,7 @@ section:nth-child(2n) {
   font-size: 12px; /*IE9以前に対応する*/
   font-size: 0.75rem;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
   .news__date {
     margin-right: 120px;
     margin-bottom: 0px;
@@ -422,7 +422,7 @@ section:nth-child(2n) {
   font-size: 14px; /*IE9以前に対応する*/
   font-size: 0.875rem;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
   .news__ttl {
     display: inline-block;
     font-size: 16px; /*IE9以前に対応する*/
@@ -473,7 +473,7 @@ section:nth-child(2n) {
   font-weight: 700;
   position: relative;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
   .faq__list--item summary {
     font-size: 18px; /*IE9以前に対応する*/
     font-size: 1.125rem;
@@ -506,7 +506,7 @@ section:nth-child(2n) {
   font-size: 14px; /*IE9以前に対応する*/
   font-size: 0.875rem;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
   .faq__list--item p {
     font-size: 18px; /*IE9以前に対応する*/
     font-size: 1.125rem;
@@ -516,7 +516,7 @@ section:nth-child(2n) {
 #Access {
   padding: 91px 0 78px;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
   #Access .section__contents {
     display: flex;
     justify-content: space-between;
@@ -531,7 +531,7 @@ section:nth-child(2n) {
 .accessInfo {
   margin-bottom: 30px;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
   .accessInfo {
     width: 49%;
     margin-bottom: 0px;
@@ -549,7 +549,7 @@ section:nth-child(2n) {
 .accessInfo__row__ttl {
   width: 120px;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
   .accessInfo__row__ttl {
     width: 174px;
   }
@@ -559,7 +559,7 @@ section:nth-child(2n) {
   width: 100%;
   max-width: 351px;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
   .map {
     max-width: 443px;
   }
@@ -601,7 +601,7 @@ form input[type=text], form input[type=mail], form textarea {
   border-radius: 5px;
   background: #EFEAE6;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
   form input[type=text], form input[type=mail], form textarea {
     max-width: 334px;
   }
@@ -609,7 +609,7 @@ form input[type=text], form input[type=mail], form textarea {
 form input[type=text]:focus, form input[type=mail]:focus, form textarea:focus {
   outline: none;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
   form input[type=text][id=zip] {
     max-width: 157px;
   }
@@ -631,7 +631,7 @@ form input[type=submit] {
   text-align: center;
   width: 100%;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
   form input[type=submit] {
     max-width: 243px;
   }
@@ -642,7 +642,7 @@ form input[type=submit] {
   background: #FFF;
   padding: 37px 20px 43px 20px;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
   .form__wrapper {
     padding: 37px 76px 43px 76px;
   }
@@ -652,7 +652,7 @@ form input[type=submit] {
   font-weight: 700;
   text-align: center;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
   .form__ttl {
     font-size: 18px; /*IE9以前に対応する*/
     font-size: 1.125rem;
@@ -661,7 +661,7 @@ form input[type=submit] {
 .form__elm {
   margin-bottom: 24px;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
   .form__elm {
     display: flex;
   }
@@ -671,13 +671,13 @@ form input[type=submit] {
   align-items: flex-start;
   margin-bottom: 8px;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
   .form__elm--container:nth-child(1) {
     width: 45%;
     margin-bottom: 0px;
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
   .form__elm--container:nth-child(2) {
     width: 50%;
   }
@@ -720,7 +720,7 @@ form input[type=submit] {
 .footerImage > img:nth-child(2) {
   max-width: 300px;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
   .footerMenu {
     display: flex;
     justify-content: space-between;
@@ -738,7 +738,7 @@ form input[type=submit] {
   text-align: center;
   margin-bottom: 15px;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
   .footerMenu__item {
     text-align: start;
     margin-bottom: 0px;
