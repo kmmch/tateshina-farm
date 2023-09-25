@@ -19,6 +19,14 @@ const NO_SCROLL_CLASS = 'noScroll'
 
 
 // --------------------------------------------
+// ローディング画面
+// --------------------------------------------
+window.onload = function() {
+    const spinner = document.getElementById('loading');
+    spinner.classList.add('loaded');
+}
+
+// --------------------------------------------
 // ハンバーガーボタンをクリックした時の処理
 // --------------------------------------------
 var hamburgerMenu = document.getElementById(HAMBURGER_MENU_ID);
