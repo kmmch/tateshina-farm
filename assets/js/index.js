@@ -39,17 +39,13 @@ hamburgerButton.addEventListener(CLICK, hamburgerBtnClick);
 // --------------------------------------------
 // ハンバーガーメニューのリンクをクリックした時の処理
 // --------------------------------------------
-function hamburgerMenuLinkClick() {
-    hamburgerButton.classList.remove(ACTIVE_CLASS);
-    hamburgerMenu.classList.remove(ACTIVE_CLASS);
-    // hamburgerCover.classList.toggle(ACTIVE_CLASS);
-    body.classList.remove(NO_SCROLL_CLASS);
-}
-HAMBURGER_MENU_LINK_IDS.forEach((id) => {
-    var hamburgerMenuLink = document.getElementById(id);
-    hamburgerMenuLink.addEventListener(CLICK, hamburgerMenuLinkClick);
+$(function(){
+    $("#hamburgerMenuList a").click(function () {
+        $("#hamburgerBtn").removeClass('active');
+        $("#hamburgerMenu").removeClass('active');
+        $("#hamburgerCover").removeClass('active');
+    });
 });
-
 
 
 // --------------------------------------------

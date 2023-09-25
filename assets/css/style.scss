@@ -530,7 +530,7 @@ section {
                 transition: 0.5s;
 
                 &[open] {
-                    height: 180px;
+                    height: 210px;
                     & summary {
                         &::after {
                             transform: rotate(225deg);
@@ -812,7 +812,7 @@ form {
 
 
 // --------------------------------------------
-// サイドバー
+// フッター
 // --------------------------------------------
 .footer {
     &Image {
@@ -848,8 +848,38 @@ form {
 
         &__item {
             font-weight: $fontWeightMain;
+            text-align: center;
+            margin-bottom: 15px;
+            @include pc {
+                text-align: start;
+                margin-bottom: 0px;
+            }
         }
 
+    }
+
+    & .section__img {
+        &.footer__img {
+            & img {
+                width: 70%;
+            }
+
+            &--1 {
+                & > img {
+                    max-width: 297px;
+                    top: -167px;
+                    left: 0px;
+                }
+            }
+
+            &--2 {
+                & > img {
+                    max-width: 237px;
+                    top: -162px;
+                    right: 0px;
+                }
+            }
+        }
     }
 
     &Copyright {
@@ -858,14 +888,62 @@ form {
     }
 }
 
+@media screen and (max-width: 1020px) {
+    .footer {
+        &Menu__wrapper {
+            margin-bottom: 33px;
+        }
+        & .section__img {
+            position: static;
+
+            & > img {
+                position: static;
+                width: auto;
+            }
+
+            &--wrapper {
+                display: flex;
+                justify-content: space-between;
+            }
+            &.footer__img {
+                &--1 {
+                    // max-
+                }
+                &--2 {
+                    & > img {
+                        height: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 586px) {
+    .footer {
+        & .section__img {
+            width: 50%;
+
+            & > img {
+                width: 100%;
+                height: 100%;
+            }
+
+            &.footer__img {
+                &--1,
+                &--2 {
+                    & > img {
+                        max-width: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
 .copyright {
     text-align: center;
 }
-
-
-// --------------------------------------------
-// フッター
-// --------------------------------------------
 
 
 
