@@ -306,7 +306,7 @@ li {
 // メインコンテンツ
 // --------------------------------------------
 section {
-    &:nth-child(2n) {
+    &.bg-on {
         background-color: $colorBackground;
     }
 }
@@ -663,8 +663,11 @@ section {
     & .description {
         font-weight: $fontWeightMain;
         text-align: center;
-        margin-bottom: 93px;
+        margin-bottom: 33px;
         @include rem(18);
+        @include pc {
+            margin-bottom: 93px;
+        }
     }
 
     & .end-message,
