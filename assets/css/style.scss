@@ -9,6 +9,11 @@
     color: $colorText;
 }
 
+a {
+    &:hover {
+        text-decoration: underline;
+    }
+}
 li {
     list-style: none;
 }
@@ -408,6 +413,11 @@ section {
 // 製品一覧
 #Product {
     padding: 0 0 100px 0;
+
+    & .wrapper {
+        max-width: none;
+        width: 100%;
+    }
 }
 
 .product {

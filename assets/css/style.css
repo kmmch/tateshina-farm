@@ -4,6 +4,10 @@
   color: #4E301B;
 }
 
+a:hover {
+  text-decoration: underline;
+}
+
 li {
   list-style: none;
 }
@@ -354,6 +358,10 @@ section.bg-on {
 
 #Product {
   padding: 0 0 100px 0;
+}
+#Product .wrapper {
+  max-width: none;
+  width: 100%;
 }
 
 .product__list {
