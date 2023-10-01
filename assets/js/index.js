@@ -49,9 +49,10 @@ hamburgerButton.addEventListener(CLICK, hamburgerBtnClick);
 // --------------------------------------------
 $(function(){
     $("#hamburgerMenuList a").click(function () {
-        $("#hamburgerBtn").removeClass('active');
-        $("#hamburgerMenu").removeClass('active');
-        $("#hamburgerCover").removeClass('active');
+        $("#hamburgerBtn").removeClass(ACTIVE_CLASS);
+        $("#hamburgerMenu").removeClass(ACTIVE_CLASS);
+        $("#hamburgerCover").removeClass(ACTIVE_CLASS);
+        $("body").removeClass(NO_SCROLL_CLASS);
     });
 });
 
