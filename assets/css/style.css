@@ -288,7 +288,7 @@ section.bg-on {
 
 #About {
   background-color: #FDF9EF;
-  padding: 35px 0 126px 0;
+  padding: 35px 0 0 0;
 }
 @media screen and (min-width: 769px) {
   #About {
@@ -357,7 +357,7 @@ section.bg-on {
 }
 
 #Product {
-  padding: 0 0 100px 0;
+  padding: 126px 0 100px 0;
 }
 #Product .wrapper {
   max-width: none;

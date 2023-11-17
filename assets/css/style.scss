@@ -338,7 +338,7 @@ section {
 // この農園について
 #About {
     background-color: $colorBackground;
-    padding: 35px 0 126px 0;
+    padding: 35px 0 0 0;
     @include pc {
         padding: 101px 0 180px 0;
         position: relative;
@@ -412,7 +412,7 @@ section {
 
 // 製品一覧
 #Product {
-    padding: 0 0 100px 0;
+    padding: 126px 0 100px 0;
 
     & .wrapper {
         max-width: none;
