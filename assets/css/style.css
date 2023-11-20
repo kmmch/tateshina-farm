@@ -392,6 +392,10 @@ section.bg-on {
   padding: 0 0 16px 16px;
 }
 
+.swiper-wrapper {
+  padding-bottom: 10px;
+}
+
 #News {
   padding: 91px 0;
 }
@@ -456,6 +460,12 @@ section.bg-on {
 .faq__list--item {
   margin-bottom: 31px;
 }
+.faq__list--item:nth-child(1) details[open] {
+  height: 100px;
+}
+.faq__list--item:nth-child(3) details[open], .faq__list--item:nth-child(4) details[open], .faq__list--item:nth-child(5) details[open] {
+  height: 120px;
+}
 .faq__list--item:nth-last-child(1) {
   margin-bottom: 0px;
 }
@@ -470,13 +480,16 @@ section.bg-on {
   transform: rotate(225deg);
   top: 18px;
 }
+.faq__list--item details p {
+  line-height: 150%;
+}
 .faq__list--item summary {
   display: flex;
   justify-content: flex-start;
   list-style: none;
   background-color: #fff;
   padding: 16px 0 12px 55px;
-  margin-bottom: 36px;
+  margin-bottom: 24px;
   height: 50px;
   font-size: 16px; /*IE9以前に対応する*/
   font-size: 1rem;
