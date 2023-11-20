@@ -316,6 +316,8 @@ section.bg-on {
   }
 }
 #About .about__txt {
+  color: #857868;
+  font-weight: 700;
   max-width: 526px;
   background: rgba(255, 255, 255, 0.9);
   line-height: 250%;
