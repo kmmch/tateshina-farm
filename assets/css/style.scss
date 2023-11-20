@@ -45,6 +45,19 @@ li {
     }
 }
 
+.dispOver1031 {
+    display: none;
+    @media screen and (min-width: 1031px) {
+        display: block;
+    }
+}
+.dispUnder1031 {
+    display: block;
+    @media screen and (min-width: 1031px) {
+        display: none;
+    }
+}
+
 
 // --------------------------------------------
 // ファーストビジュアル
@@ -182,7 +195,7 @@ li {
 
     &.active {
         @include pc {
-            right: calc(30% - 0.9px);
+            right: calc(40% - 0.9px);
             border-radius: 50% 0 0 50%;
         }
         & span {
@@ -220,7 +233,7 @@ li {
     transition: all 0.6s;
 
     @include pc {
-        width: 30%;
+        width: 40%;
     }
 
     /*アクティブクラスがついたら位置を0に*/
@@ -238,7 +251,7 @@ li {
             -webkit-overflow-scrolling: touch;
 
             @include pc {
-                width: 30%;
+                width: 40%;
             }
         }
     }
@@ -580,15 +593,18 @@ section {
                 justify-content: flex-start;
                 list-style: none;
                 background-color: $colorWhite;
-                padding: 16px 0 12px 55px;
+                padding: 16px 50px 12px 55px;
                 margin-bottom: 24px;
-                height: 50px;
+                height: 68px;
                 @include rem(16);
                 font-weight: $fontWeightMain;
                 position: relative;
+                align-items: center;
 
                 @include pc {
                     @include rem(18);
+                    padding: 16px 0px 12px 55px;
+                    height: 50px;
                 }
 
                 &::-webkit-details-marker {
@@ -598,9 +614,12 @@ section {
                 &::before {
                     position: absolute;
                     content: "Q";
-                    top: 12px;
+                    top: 22px;
                     left: 24px;
                     @include rem(24);
+                    @include pc {
+                        top: 14px;
+                    }
                 }
 
                 &::after {
@@ -611,9 +630,12 @@ section {
                     width: 16px;
                     height: 16px;
                     transform: rotate(45deg);
-                    top: 14px;
+                    top: 22px;
                     right: 24px;
                     transition: all 0.5s;
+                    @include pc {
+                        top: 14px;
+                    }
                 }
             }
 

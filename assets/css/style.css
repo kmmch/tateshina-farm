@@ -42,6 +42,24 @@ li {
   }
 }
 
+.dispOver1031 {
+  display: none;
+}
+@media screen and (min-width: 1031px) {
+  .dispOver1031 {
+    display: block;
+  }
+}
+
+.dispUnder1031 {
+  display: block;
+}
+@media screen and (min-width: 1031px) {
+  .dispUnder1031 {
+    display: none;
+  }
+}
+
 .fv {
   background-repeat: no-repeat;
   background-size: cover;
@@ -169,7 +187,7 @@ li {
 }
 @media screen and (min-width: 769px) {
   #hamburgerBtn.active {
-    right: calc(30% - 0.9px);
+    right: calc(40% - 0.9px);
     border-radius: 50% 0 0 50%;
   }
 }
@@ -203,7 +221,7 @@ li {
 }
 @media screen and (min-width: 769px) {
   #hamburgerMenu {
-    width: 30%;
+    width: 40%;
   }
 }
 #hamburgerMenu.active {
@@ -221,7 +239,7 @@ li {
 }
 @media screen and (min-width: 769px) {
   #hamburgerMenu.active #hamburgerMenuList {
-    width: 30%;
+    width: 40%;
   }
 }
 #hamburgerMenu ul li {
@@ -488,18 +506,21 @@ section.bg-on {
   justify-content: flex-start;
   list-style: none;
   background-color: #fff;
-  padding: 16px 0 12px 55px;
+  padding: 16px 50px 12px 55px;
   margin-bottom: 24px;
-  height: 50px;
+  height: 68px;
   font-size: 16px; /*IE9以前に対応する*/
   font-size: 1rem;
   font-weight: 700;
   position: relative;
+  align-items: center;
 }
 @media screen and (min-width: 769px) {
   .faq__list--item summary {
     font-size: 18px; /*IE9以前に対応する*/
     font-size: 1.125rem;
+    padding: 16px 0px 12px 55px;
+    height: 50px;
   }
 }
 .faq__list--item summary::-webkit-details-marker {
@@ -508,10 +529,15 @@ section.bg-on {
 .faq__list--item summary::before {
   position: absolute;
   content: "Q";
-  top: 12px;
+  top: 22px;
   left: 24px;
   font-size: 24px; /*IE9以前に対応する*/
   font-size: 1.5rem;
+}
+@media screen and (min-width: 769px) {
+  .faq__list--item summary::before {
+    top: 14px;
+  }
 }
 .faq__list--item summary::after {
   position: absolute;
@@ -521,9 +547,14 @@ section.bg-on {
   width: 16px;
   height: 16px;
   transform: rotate(45deg);
-  top: 14px;
+  top: 22px;
   right: 24px;
   transition: all 0.5s;
+}
+@media screen and (min-width: 769px) {
+  .faq__list--item summary::after {
+    top: 14px;
+  }
 }
 .faq__list--item p {
   font-size: 14px; /*IE9以前に対応する*/

@@ -71,6 +71,10 @@ const swiper = new Swiper('.swiper', {
     spaceBetween:10,
     breakpoints: {
         768: {
+            slidesPerView: 3.5,
+            spaceBetween:20,
+        },
+        1030: {
             slidesPerView: 5.5,// PCでは3枚を中央に、.5で見切れ具合を調整
             spaceBetween:20,
         }
